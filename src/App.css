@@ -20,3 +20,8 @@ body{
 #root{
     height: 100vh; /*tarayıcının yüksekliği*/
 }
+
+
+.drawer{
+    width: 500px; !important    
+}
