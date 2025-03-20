@@ -3,10 +3,11 @@ import "../css/Header.css";
 import { SlBasket } from "react-icons/sl";
 import { IoSunny } from "react-icons/io5";
 import { FaMoon } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [theme, setTheme] = useState(false);
-
+  const navigate = useNavigate();
   const changeTheme = () => {
       const root = document.getElementById("root");
       if(theme){
@@ -26,7 +27,7 @@ const Header = () => {
         alignItems: "center",
       }}
     >
-      <div>
+      <div  onClick={()=>navigate("/")} style={{ cursor: "pointer" }}>
         <img className="logo" src="/Gsb-Logo.png" alt="GSB Logo" />
       </div>
       <div className="flex-row">
